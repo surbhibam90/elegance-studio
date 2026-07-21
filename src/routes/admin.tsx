@@ -2,7 +2,7 @@ import { createFileRoute, Link, Outlet, useRouterState } from "@tanstack/react-r
 import { LayoutDashboard, Package, FolderTree, ShoppingBag, Users, Key, Settings, LineChart, Lock, ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const NAV = [
+const NAV: Array<{ to: string; label: string; icon: typeof LayoutDashboard; exact?: boolean }> = [
   { to: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { to: "/admin/products", label: "Products", icon: Package },
   { to: "/admin/categories", label: "Categories", icon: FolderTree },
@@ -11,7 +11,7 @@ const NAV = [
   { to: "/admin/passwords", label: "Passwords", icon: Key },
   { to: "/admin/analytics", label: "Analytics", icon: LineChart },
   { to: "/admin/settings", label: "Settings", icon: Settings },
-] as const;
+];
 
 export const Route = createFileRoute("/admin")({
   head: () => ({ meta: [{ title: "Admin — Luxora" }, { name: "robots", content: "noindex" }] }),
