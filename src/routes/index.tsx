@@ -86,22 +86,22 @@ function Home() {
   }, []);
 
   // mouse parallax
-  useEffect(() => {
-    const el = heroRef.current;
-    if (!el) return;
-    const onMove = (e: MouseEvent) => {
-      const rect = el.getBoundingClientRect();
-      const mx = (e.clientX - rect.left) / rect.width - 0.5;
-      const my = (e.clientY - rect.top) / rect.height - 0.5;
-      cardsRef.current.forEach((card, i) => {
-        if (!card) return;
-        const depth = (i % 4) + 1;
-        gsap.to(card, { xPercent: mx * depth * 2, yPercent: my * depth * 2, duration: 1.2, ease: "power3.out", overwrite: "auto" });
-      });
-    };
-    el.addEventListener("mousemove", onMove);
-    return () => el.removeEventListener("mousemove", onMove);
-  }, []);
+  // useEffect(() => {
+  //   const el = heroRef.current;
+  //   if (!el) return;
+  //   const onMove = (e: MouseEvent) => {
+  //     const rect = el.getBoundingClientRect();
+  //     const mx = (e.clientX - rect.left) / rect.width - 0.5;
+  //     const my = (e.clientY - rect.top) / rect.height - 0.5;
+  //     cardsRef.current.forEach((card, i) => {
+  //       if (!card) return;
+  //       const depth = (i % 4) + 1;
+  //       gsap.to(card, { xPercent: mx * depth * 2, yPercent: my * depth * 2, duration: 1.2, ease: "power3.out", overwrite: "auto" });
+  //     });
+  //   };
+  //   el.addEventListener("mousemove", onMove);
+  //   return () => el.removeEventListener("mousemove", onMove);
+  // }, []);
 
   return (
     <>
@@ -121,9 +121,9 @@ function Home() {
               style={{
                 left: `${pos.x}%`,
                 top: `${pos.y}%`,
-                transform: `translate(-50%, -50%) scale(${pos.s}) rotate(${pos.r}deg)`,
-                width: 120,
-                height: 150,
+                transform: ` scale(${pos.s}) rotate(${pos.r}deg)`,
+                width: 180,
+                height: 225,
                 zIndex: 1,
               }}
             >
@@ -137,7 +137,7 @@ function Home() {
           );
         })}
 
-        <div className="container-lux relative z-10 text-center py-20">
+        <div className="container-lux relative z-10 text-center py-20 glass w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -173,7 +173,7 @@ function Home() {
               Explore Collection <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link to="/private" className="glass px-8 py-4 rounded-full text-xs uppercase tracking-[0.24em] hover:bg-white transition-colors flex items-center gap-2">
-              <Lock className="h-3.5 w-3.5" /> Private Access
+              <Lock className="h-3.5 w-3.5" /> Exclusive
             </Link>
           </motion.div>
           <motion.div

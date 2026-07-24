@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const NAV: Array<{ to: string; label: string; icon?: typeof Lock }> = [
   { to: "/", label: "Home" },
   { to: "/collections", label: "Collections" },
-  { to: "/private", label: "Private", icon: Lock },
+  { to: "/private", label: "Exclusive", icon: Lock },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
@@ -33,13 +33,13 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all duration-500",
-        transparent ? "bg-transparent" : "glass border-b border-border/40"
+        "fixed top-0 inset-x-0 z-50 transition-all duration-500 glass border-b border-border/40",
+        /*transparent ? "bg-transparent" : "glass border-b border-border/40"*/
       )}
     >
       <div className="container-lux flex items-center justify-between h-20">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="text-2xl font-serif tracking-tight text-foreground">Luxora</span>
+          <span className="text-2xl font-serif tracking-tight text-foreground">LUXORA</span>
           <span className="hidden sm:inline text-[10px] tracking-[0.3em] text-muted-foreground uppercase mt-1">
             Maison
           </span>

@@ -2,7 +2,7 @@ export const CATEGORIES = [
   { slug: "watches", name: "Luxury Watches", tagline: "Timeless mechanics on your wrist" },
   { slug: "handbags", name: "Luxury Handbags", tagline: "Crafted to be carried, made to be kept" },
   { slug: "clothing", name: "Luxury Clothing", tagline: "Tailoring for the modern connoisseur" },
-  { slug: "private", name: "Private Collection", tagline: "Reserved for approved members" },
+  { slug: "private", name: "Exclusive Collection", tagline: "Reserved for approved members" },
 ] as const;
 
 export const DEMO_ORDERS = [
