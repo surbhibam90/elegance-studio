@@ -137,7 +137,7 @@ function Home() {
           );
         })}
 
-        <div className="container-lux relative z-10 text-center py-20 glass w-3xl">
+        <div className="container-lux relative z-10 text-center py-8 sm:py-20 glass w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -180,7 +180,7 @@ function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 1 }}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.3em] uppercase text-muted-foreground"
+            className="hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.3em] uppercase text-muted-foreground"
           >
             Scroll to explore
           </motion.div>
