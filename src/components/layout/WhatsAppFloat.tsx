@@ -10,7 +10,7 @@ export function WhatsAppFloat() {
       className="fixed bottom-6 right-6 z-40 group"
       aria-label="Chat on WhatsApp"
     >
-      <div className="glass rounded-full pl-3 pr-5 py-3 flex items-center gap-3 soft-shadow hover:scale-105 transition-transform">
+      <div className="glass rounded-full pl-3 pr-3 sm:pr-5 py-3 flex items-center gap-3 soft-shadow hover:scale-105 transition-transform">
         <div className="h-9 w-9 rounded-full bg-[#25D366] flex items-center justify-center">
           <MessageCircle className="h-5 w-5 text-white" />
         </div>
