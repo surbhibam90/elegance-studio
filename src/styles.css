@@ -160,3 +160,11 @@
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
+
+/* Hide Lovable branding icon */
+iframe[src*="lovable"],
+[class*="lovable"],
+[data-testid*="lovable"],
+[class*="Lovable"] {
+  display: none !important;
+}
