@@ -106,7 +106,7 @@ function PDP() {
                 <ShoppingBag className="h-4 w-4" /> Add to Bag
               </button>
               <a href={whatsappUrl(waMsg)} target="_blank" rel="noreferrer" className="flex-1 min-w-[200px] glass py-4 rounded-full text-xs uppercase tracking-[0.24em] flex items-center justify-center gap-2 hover:bg-white transition-colors">
-                <MessageCircle className="h-4 w-4" /> Enquire on WhatsApp
+                <MessageCircle className="h-4 w-4" /> <span class="hidden sm:block">Enquire on WhatsApp</span><span class="block sm:hidden">WhatsApp</span>
               </a>
               <button onClick={() => toggle(product.id)} className={cn("h-14 w-14 glass rounded-full flex items-center justify-center", wished && "text-destructive")}>
                 <Heart className={cn("h-4 w-4", wished && "fill-current")} />
