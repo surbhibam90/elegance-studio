@@ -64,7 +64,7 @@ function CollectionsPage() {
             <div className="eyebrow">The catalogue</div>
             <h1 className="font-serif text-5xl md:text-6xl mt-2">Collections</h1>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             <div className="glass rounded-full flex items-center pl-5 pr-2 py-1">
               <Search className="h-4 w-4 text-muted-foreground" />
               <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search maison…" className="bg-transparent outline-none text-sm px-3 py-2 w-48" />
